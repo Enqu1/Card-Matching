@@ -2,7 +2,7 @@
   "name": "card-matching",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://liamg2810.github.io/Card-Matching",
+  "homepage": "https://liamg2810.github.io/Card-Matching/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
