@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 
-const colors = ["red", "green", "yellow", "blue"];
+const colors = [
+  "red",
+  "green",
+  "yellow",
+  "blue",
+  "purple",
+  "orange",
+  "aqua",
+  "violet",
+  "pink",
+];
 
 function App() {
   const [gameColors, setGameColors] = useState<string[]>([]);
@@ -13,19 +23,18 @@ function App() {
   return (
     <>
       {gameColors.map((color, index) => (
-        <div className="card">
-          {matchedCards.includes(color) ? (
-            <div style={{ backgroundColor: color }} key={index}>
+        <div className="card" key={index}>
+          {!matchedCards.includes(color) ? (
+            <div style={{ backgroundColor: color }}>
               {color} {index}
             </div>
           ) : (
-            <div key={index}>
+            <div>
               {color} {index}
             </div>
           )}
         </div>
       ))}
-      ;
     </>
   );
 }
