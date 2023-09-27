@@ -2,7 +2,7 @@
   "name": "card-matching",
   "private": true,
   "version": "0.0.0",
-  "homepage": ".",
+  "homepage": "https://enqu1.github.com/Enqu1/Card-Matching",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

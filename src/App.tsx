@@ -24,7 +24,6 @@ function App() {
 
   return (
     <>
-      <div>a</div>
       <Cards
         gameColors={gameColors}
         matchedCards={matchedCards}
