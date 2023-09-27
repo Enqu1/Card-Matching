@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Cards from "./components/Cards";
 
 const colors = [
   "red",
@@ -10,6 +11,7 @@ const colors = [
   "aqua",
   "violet",
   "pink",
+  "mintcream",
 ];
 
 function App() {
@@ -22,19 +24,11 @@ function App() {
 
   return (
     <>
-      {gameColors.map((color, index) => (
-        <div className="card" key={index}>
-          {!matchedCards.includes(color) ? (
-            <div style={{ backgroundColor: color }}>
-              {color} {index}
-            </div>
-          ) : (
-            <div>
-              {color} {index}
-            </div>
-          )}
-        </div>
-      ))}
+      <Cards
+        gameColors={gameColors}
+        matchedCards={matchedCards}
+        setMatchedCards={(prop: string[]) => setMatchedCards(prop)}
+      ></Cards>
     </>
   );
 }
