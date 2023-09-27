@@ -23,13 +23,13 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       <Cards
         gameColors={gameColors}
         matchedCards={matchedCards}
         setMatchedCards={(prop: string[]) => setMatchedCards(prop)}
       ></Cards>
-    </>
+    </div>
   );
 }
 
