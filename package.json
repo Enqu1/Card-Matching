@@ -2,7 +2,7 @@
   "name": "card-matching",
   "private": true,
   "version": "0.0.0",
-  "homepage": ".",
+  "homepage": "https://google.com",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
