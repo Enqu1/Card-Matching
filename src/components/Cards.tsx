@@ -38,15 +38,21 @@ function Cards({ gameColors, matchedCards, setMatchedCards }: Props) {
 
   return (
     <div className="cards">
-      {gameColors.map((color, index) => (
-        <div className="card" key={index}>
-          {matchedCards.includes(color) ||
+      {gameColors.map((image, index) => (
+        <div
+          className={
+            "card " +
+            ((matchedCards.includes(image) ||
+              selectedCard === index ||
+              compareCard === index) &&
+              "flipped")
+          }
+          key={index}
+        >
+          {matchedCards.includes(image) ||
           selectedCard === index ||
           compareCard === index ? (
-            <div
-              style={{ backgroundColor: color }}
-              className="card-content"
-            ></div>
+            <img src={image} alt={image} className="card-content"></img>
           ) : (
             <div
               className="card-content"
