@@ -15,6 +15,10 @@ function Cards({ gameColors, matchedCards, setMatchedCards }: Props) {
       return;
     }
 
+    if (gameColors.length === matchedCards.length) {
+      console.log("asd");
+    }
+
     if (selectedCard === index) return;
 
     if (selectedCard === -1) {
@@ -23,7 +27,8 @@ function Cards({ gameColors, matchedCards, setMatchedCards }: Props) {
     }
 
     if (gameColors[selectedCard] === gameColors[index]) {
-      setMatchedCards(matchedCards.concat(gameColors[index]));
+      const toAdd = [gameColors[selectedCard], gameColors[index]];
+      setMatchedCards(matchedCards.concat(toAdd));
 
       setSelectedCard(-1);
     } else {
@@ -45,7 +50,8 @@ function Cards({ gameColors, matchedCards, setMatchedCards }: Props) {
             ((matchedCards.includes(image) ||
               selectedCard === index ||
               compareCard === index) &&
-              "flipped")
+              "flipped ") +
+            (gameColors.length === matchedCards.length && "solved")
           }
           key={index}
         >
